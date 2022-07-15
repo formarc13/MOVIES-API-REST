@@ -12,7 +12,7 @@ router.get('/movies', moviesController.getAll);
 router.get('/movies/:id', moviesController.getOne);
 router.post('/movies/create', moviesController.create);
 router.put('/movies/update/:id', moviesController.update);
-router.delete('/movies/delete', moviesController.delete);
+router.delete('/movies/delete/:id', moviesController.delete);
 //ACTORS
 router.get('/actors/', actorsController.getAll); 
 router.get('/actors/:id', actorsController.getOne); 
