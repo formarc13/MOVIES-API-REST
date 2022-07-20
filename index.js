@@ -6,16 +6,12 @@ require("dotenv").config();
 
 
 //Ejecuto el llamado a mis rutas
-const indexRouter = require('./api/routes/index');
-const moviesRoutes = require('./api/routes/moviesRoutes');
-const genresRoutes = require('./api/routes/genresRoutes');
 const apiRoutes = require('./api/routes/apiRoutes');
 
 //Aquí pueden colocar las rutas de las APIs
 
 
 // view engine setup
-app.set('views', path.resolve(__dirname, './views'));
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.resolve(__dirname, '../public')));
@@ -27,9 +23,6 @@ app.use(express.json())
 //Aquí estoy disponiendo la posibilidad para utilizar el seteo en los formularios para el usod e los metodos put ó delete
 app.use(methodOverride('_method'));
 
-app.use('/', indexRouter);
-app.use(moviesRoutes);
-app.use(genresRoutes);
 app.use('/api', apiRoutes);
 
 
