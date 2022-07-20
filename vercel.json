@@ -1,10 +1,8 @@
 {
     "version": 2,
-    "name": "movies-api-rest-jona",
-    "alias": ["movies-api-rest-jona"],
     "builds": [
       {
-        "src": "api/app.js",
+        "src": "./index.js",
         "use": "@vercel/node"
       }
     ],
@@ -16,7 +14,7 @@
             "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
         },
         "src": "/(.*)",
-        "dest": "api/app.js"
+        "dest": "/"
       }
     ]
   }

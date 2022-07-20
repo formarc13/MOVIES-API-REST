@@ -2,9 +2,10 @@
   "name": "myapp",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "nodemon src/app.js"
+    "test": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",

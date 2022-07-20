@@ -6,10 +6,10 @@ require("dotenv").config();
 
 
 //Ejecuto el llamado a mis rutas
-const indexRouter = require('./routes/index');
-const moviesRoutes = require('./routes/moviesRoutes');
-const genresRoutes = require('./routes/genresRoutes');
-const apiRoutes = require('./routes/apiRoutes');
+const indexRouter = require('./api/routes/index');
+const moviesRoutes = require('./api/routes/moviesRoutes');
+const genresRoutes = require('./api/routes/genresRoutes');
+const apiRoutes = require('./api/routes/apiRoutes');
 
 //Aquí pueden colocar las rutas de las APIs
 
