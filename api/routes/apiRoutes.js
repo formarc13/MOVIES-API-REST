@@ -8,25 +8,25 @@ const { login, register } = require("../validations/userValidator")
 const verifyToken = require("../middlewares/validate-token");
 
 //GENRES
-router.get('/genres', genresController.list);
-router.get('/genres/:id', genresController.detail);
+router.get('/api/genres', genresController.list);
+router.get('/api/genres/:id', genresController.detail);
 //MOVIES
-router.get('/movies', verifyToken, moviesController.getAll);
-router.get('/movies/:id', verifyToken, moviesController.getOne);
-router.post('/movies/create', verifyToken, moviesController.create);
-router.put('/movies/update/:id', verifyToken, moviesController.update);
-router.delete('/movies/delete/:id', verifyToken, moviesController.delete);
+router.get('/api/movies', verifyToken, moviesController.getAll);
+router.get('/api/movies/:id', verifyToken, moviesController.getOne);
+router.post('/api/movies/create', verifyToken, moviesController.create);
+router.put('/api/movies/update/:id', verifyToken, moviesController.update);
+router.delete('/api/movies/delete/:id', verifyToken, moviesController.delete);
 //ACTORS
-router.get('/actors/', actorsController.getAll); 
-router.get('/actors/:id', actorsController.getOne); 
-router.post('/actors/create', actorsController.create); 
-router.put('/actors/update/:id', actorsController.update);
-router.delete('/actors/delete/:id', actorsController.delete);
+router.get('/api/actors/', actorsController.getAll); 
+router.get('/api/actors/:id', actorsController.getOne); 
+router.post('/api/actors/create', actorsController.create); 
+router.put('/api/actors/update/:id', actorsController.update);
+router.delete('/api/actors/delete/:id', actorsController.delete);
 //USERS
 //POST Creacion de usuario (registro)
-router.post('/users', register, usersController.create);
+router.post('/api/users', register, usersController.create);
 //POST Login
-router.post('/users/validar', login, usersController.validate);
+router.post('/api/users/validar', login, usersController.validate);
 
 
 

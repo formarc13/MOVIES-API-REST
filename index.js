@@ -23,7 +23,8 @@ app.use(express.json())
 //Aquí estoy disponiendo la posibilidad para utilizar el seteo en los formularios para el usod e los metodos put ó delete
 app.use(methodOverride('_method'));
 
-app.use('/api', apiRoutes);
+/* app.use('/', apiRoutes); */
+app.use('/', (req, res) => res.json({value: "Hello vercel"}) );
 
 
 //Activando el servidor desde express
